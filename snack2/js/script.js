@@ -3,18 +3,14 @@
 
 // ex
 
-var a = input();
-var b = input();
+var a = prompt("Inserisci una parola");
+var b = prompt("Inserisci una parola");
 
 var n = strCompare(a, b);
 
 output(n, a, b);
 
 // funzioni
-
-function input(){
-    return (prompt("Inserisci una parola"));
-}
 
 function strCompare(str1, str2){
     var x = str1.length;
