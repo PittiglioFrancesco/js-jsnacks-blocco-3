@@ -2,12 +2,7 @@
 
 // ex
 
-do {
-    if ((stringa == isNaN) || (stringa.length < 2)) {
-        alert("Inserisci una parola con almeno 2 lettere, altrimenti non ha senso!")
-    }
-    var stringa = prompt("Inserisci una parola");
-} while ((stringa == isNaN) || (stringa.length < 2));
+var stringa = input();
 
 var n = stringa.length;
 
@@ -15,6 +10,20 @@ stringa = fixStringa(stringa, n);
 console.log(stringa);
 
 // funzioni
+
+function input(){
+
+    var stringa = "temp";
+
+    do {
+        if ((stringa == isNaN) || (stringa.length < 2)) {
+            alert("Inserisci una parola con almeno 2 lettere, altrimenti non ha senso!")
+        }
+        stringa = prompt("Inserisci una parola");
+    } while ((stringa == isNaN) || (stringa.length < 2));
+    
+    return stringa
+}
 
 function fixStringa(a, n){
 

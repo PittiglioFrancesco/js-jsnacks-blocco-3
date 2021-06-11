@@ -10,7 +10,7 @@ vet = randomGen(max);
 console.log(vet);
 
 var b = inputB();
-var a = inputA();
+var a = inputA(b);
 
 var newVet = [];
 newVet = riempi(vet, a, b);
@@ -30,14 +30,14 @@ function inputB (){
     return n;
 }
 
-function inputA (){
-    if ((a > b)) {
-        alert("La posizione di inizio deve essere minore di quella di fine")
-    } else if (a <= 0) {
-        alert("La posizione d'inizio deve essere maggiore di 0")
-    }
+function inputA (z){
     do{
-        var n = parseInt(prompt("Inserisci il numero della posizione di fine(da 1 a 100)"));
+        if ((a > b)) {
+            alert("La posizione di inizio deve essere minore di quella di fine")
+        } else if (a <= 0) {
+            alert("La posizione d'inizio deve essere maggiore di 0")
+        }
+        var n = parseInt(prompt("Inserisci il numero della posizione di inizio(da 1 a " + z + ")"));
     } while ((a > b) || (a <= 0));
 
     return n;
